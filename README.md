@@ -1,2 +1,2 @@
 # ERA_2023
-Deep Learning trainin_ERA_School AI 
+Deep Learning training_ERA_School AI 
