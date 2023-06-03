@@ -20,8 +20,8 @@ Imported the necessary modules for deep learning using PyTorch and torchvision:
    Check the GPU availability and connecting the device to gpu 
  
  #### Code Block 3 (importing from utils) 
-   The code you provided defines two sets of data transformations: train_transforms and test_transforms. 
-   The train_transforms variable represents the transformations to be applied to the training data.        
+   The code you provided defines two sets of data transformations: train_transforms and test_transforms.    
+   The _train_transforms_ variable represents the transformations to be applied to the training data.        
          - transforms.RandomApply([transforms.CenterCrop(22), ], p=0.1): This transformation randomly applies a center crop of size 22x22 to the input image with a probability of
             0.1. This helps introduce some variation in the training data by occasionally cropping the center of the image.  
          - transforms.Resize((28, 28)): This transformation resizes the image to a fixed size of 28x28 pixels.  
