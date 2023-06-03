@@ -39,9 +39,8 @@ _Imported the necessary modules for deep learning using PyTorch and torchvision:
 #### Code Block 5 
    _Sets up the data loaders for the training and test datasets._ 
    
-   batch_size = 512: This line sets the batch size to 512.  
-   kwargs = {'batch_size': batch_size, 'num_workers': 12, 'pin_memory': True}: This line defines a dictionary kwargs that contains the keyword arguments to be passed to the data    loaders. The batch_size argument is set to the previously defined batch_size value. The num_workers argument specifies the number of subprocesses to use for data loading. Setting it to a higher value, such as 12, can help speed up data loading if you have sufficient CPU resources. The pin_memory argument is set to True, which enables faster data transfer to the GPU if you are using one.
-
-train_loader = torch.utils.data.DataLoader(train_data, shuffle=True, **kwargs): This line creates the data loader for the training dataset. The train_data argument is the training dataset object (datasets.MNIST) created earlier. The shuffle=True argument shuffles the training data before each epoch to introduce randomness and prevent the model from overfitting. The **kwargs syntax is used to unpack the dictionary of keyword arguments (batch_size, num_workers, pin_memory) and pass them to the data loader.
+   **batch_size = 512** : This line sets the batch size to 512.  
+   **kwargs = {'batch_size': batch_size, 'num_workers': 12, 'pin_memory': True}** . The batch_size argument is set to the previously defined batch_size value. The num_workers argument specifies the number of subprocesses to use for data loading. The pin_memory argument is set to True, which enables faster data transfer to the GPU if you are using one.
+   **train_loader = torch.utils.data.DataLoader(train_data.....)** : This line creates the data loader for the training dataset. The train_data argument is the training dataset object (datasets.MNIST) created earlier. The shuffle=True argument shuffles the training data before each epoch to introduce randomness and prevent the model from overfitting. **test_loader = torch.utils.data.DataLoader(test_data,......** This line creates the data loader for the test dataset. 
 
      
