@@ -47,25 +47,21 @@ _Imported the necessary modules for deep learning using PyTorch and torchvision:
   _Visualize the data iteration from train loader_ 
   
  #### Code Block 7 (S5) 
- *Buid the model**
-_model summary_   
+ **Buid the model**    
+_model summary_     
  
  
        | Layer (type)       |Output Shape       |  Param       |
-       | ------------------ |:-----------------:| ------------:|
+       
        |    Conv2d-1        |  [-1, 32, 26, 26] |          288 |  
             Conv2d-2           [-1, 64, 24, 24]          18,432
             Conv2d-3          [-1, 128, 10, 10]          73,728
             Conv2d-4            [-1, 256, 8, 8]         294,912
             Linear-5                   [-1, 50]         204,850
             Linear-6                   [-1, 10]             510
-================================================================
-Total params: 592,720
-Trainable params: 592,720
-Non-trainable params: 0
-----------------------------------------------------------------
-Input size (MB): 0.00
-Forward/backward pass size (MB): 0.67
-Params size (MB): 2.26
-Estimated Total Size (MB): 2.93
-----------------------------------------------------------------
+
+**Total params: 592,720  
+Trainable params: 592,720  
+Non-trainable params: 0  
+Estimated Total Size (MB): 2.93** 
+
