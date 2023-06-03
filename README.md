@@ -8,3 +8,4 @@
 -  This ReadME explains the S5 file according to heading Code blocks and then connecting to other two files 
 
 ##### Code Block 1 
+Imported the necessary modules for deep learning using PyTorch and torchvision.
