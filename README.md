@@ -8,7 +8,7 @@
 -  This ReadME explains the S5 file according to heading Code blocks and then connecting to other two files 
 
 ##### Code Block 1 (S5)
-Imported the necessary modules for deep learning using PyTorch and torchvision:  
+_Imported the necessary modules for deep learning using PyTorch and torchvision:_    
   torch: providing data structures and operations for tensors and neural networks. 
   torch.nn: classes for building neural network architectures. 
   torch.nn.functional (imported as F):  It provides various activation functions, loss functions, and other operations commonly used in deep learning. 
@@ -20,7 +20,7 @@ Imported the necessary modules for deep learning using PyTorch and torchvision:
    Check the GPU availability and connecting the device to gpu 
  
  #### Code Block 3 (importing from utils) 
-   The code you provided defines two sets of data transformations: train_transforms and test_transforms.    
+   _The code you provided defines two sets of data transformations: train_transforms and test_transforms._    
    The **train_transforms** variable represents the transformations to be applied to the training data.        
          - transforms.RandomApply([transforms.CenterCrop(22), ], p=0.1): This transformation randomly applies a center crop of size 22x22 to the input image with a probability of
             0.1. This helps introduce some variation in the training data by occasionally cropping the center of the image.  
@@ -35,5 +35,13 @@ Imported the necessary modules for deep learning using PyTorch and torchvision:
    The code you provided initializes the training and test datasets using the MNIST dataset from torchvision. The MNIST dataset consists of grayscale images of handwritten digits
    from 0 to 9.  
    ![Image Data set] (https://en.wikipedia.org/wiki/MNIST_database#/media/File:MnistExamples.png)
+   
+#### Code Block 5 
+   _Sets up the data loaders for the training and test datasets._ 
+   
+   batch_size = 512: This line sets the batch size to 512.  
+   kwargs = {'batch_size': batch_size, 'num_workers': 12, 'pin_memory': True}: This line defines a dictionary kwargs that contains the keyword arguments to be passed to the data    loaders. The batch_size argument is set to the previously defined batch_size value. The num_workers argument specifies the number of subprocesses to use for data loading. Setting it to a higher value, such as 12, can help speed up data loading if you have sufficient CPU resources. The pin_memory argument is set to True, which enables faster data transfer to the GPU if you are using one.
+
+train_loader = torch.utils.data.DataLoader(train_data, shuffle=True, **kwargs): This line creates the data loader for the training dataset. The train_data argument is the training dataset object (datasets.MNIST) created earlier. The shuffle=True argument shuffles the training data before each epoch to introduce randomness and prevent the model from overfitting. The **kwargs syntax is used to unpack the dictionary of keyword arguments (batch_size, num_workers, pin_memory) and pass them to the data loader.
 
      
