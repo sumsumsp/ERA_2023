@@ -70,7 +70,7 @@ Estimated Total Size (MB): 2.93**
 The provided code defines two functions, **train() and test()** , commonly used in deep learning for model training and evaluation. The train() function performs the training loop, updating model parameters based on calculated loss and gradients. The test() function evaluates the model's performance on the test data. These functions calculate loss, accuracy, and update performance metrics while iterating through batches of data. They are essential for training and evaluating deep learning models and are commonly used in the training pipeline.
 
 
-#### Code Block  10
+#### Code Block  10 (S5)
 
 The code provided initializes a neural network model (Net) and sets its device to the specified device (GPU). It also initializes an optimizer (optim.SGD) with a learning rate of 0.01 and momentum of 0.9. Additionally, it sets up a learning rate scheduler (optim.lr_scheduler.StepLR) that reduces the learning rate by a factor of 0.1 every 15 epochs. The total number of epochs is set to 20.
 
@@ -79,5 +79,13 @@ The code provided initializes a neural network model (Net) and sets its device t
 Updates the learning rate using the scheduler's step() method. This loop is repeated for the specified number of epochs, allowing the model to be trained and evaluated iteratively. The learning rate is adjusted periodically according to the scheduler settings.
 
 
+#### Code Block 11 (S5)
+Visualize the trainin/test accuracy in each epoch 
+
+
+
+## Conclusion 
+
+### The code are corrected in each blocks and ran with a test accuracy > 99% 
 
 
