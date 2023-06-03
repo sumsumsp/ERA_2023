@@ -33,5 +33,6 @@ Imported the necessary modules for deep learning using PyTorch and torchvision:
 
 #### Code Block 4 (importing from utils)
    The code you provided initializes the training and test datasets using the MNIST dataset from torchvision. The MNIST dataset consists of grayscale images of handwritten digits
-   from 0 to 9.
-   ![Image Data set] (https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTozsokghP5sw7Jg6EBUTIGvC_73etkoV3-Ifx94xmx1h8AbaY0JvMf9_UIjRdHJe6YVUw&usqp=CAU)
+   from 0 to 9.  
+   ![Image Data set] 
+   (https://en.wikipedia.org/wiki/MNIST_database#/media/File:MnistExamples.png)
