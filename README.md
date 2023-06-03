@@ -8,7 +8,7 @@
 -  This ReadME explains the S5 file according to heading Code blocks and then connecting to other two files 
 
 ##### Code Block 1 (S5)
-Imported the necessary modules for deep learning using PyTorch and torchvision. 
+Imported the necessary modules for deep learning using PyTorch and torchvision:  
   torch: providing data structures and operations for tensors and neural networks.
   torch.nn: classes for building neural network architectures.
   torch.nn.functional (imported as F):  It provides various activation functions, loss functions, and other operations commonly used in deep learning.
