@@ -28,7 +28,6 @@ Imported the necessary modules for deep learning using PyTorch and torchvision:
          - transforms.RandomRotation((-15., 15.), fill=0): This transformation randomly rotates the image within the range of -15 to 15 degrees. The fill=0 argument specifies that
            any pixels introduced by rotation should be filled with zeros.      
          - transforms.ToTensor(): This transformation converts the image from a PIL Image object to a PyTorch tensor.    
-         - transforms.Normalize((0.1307,), (0.3081,)): Normalization helps bring the pixel values into a standard range, which can aid in model training.
-
-    The **test_transforms** variable represents the transformations to be applied to the test data:
+         - transforms.Normalize((0.1307,), (0.3081,)): Normalization helps bring the pixel values into a standard range, which can aid in model training.  
+    The **test_transforms** variable represents the transformations to be applied to the test data
 
