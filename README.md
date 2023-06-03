@@ -47,12 +47,13 @@ _Imported the necessary modules for deep learning using PyTorch and torchvision:
   _Visualize the data iteration from train loader_ 
   
  #### Code Block 7 (S5) 
- _model Summary_   
- **buid the model** 
- ----------------------------------------------------------------
-        Layer (type)               Output Shape         Param #
-================================================================
-            Conv2d-1           [-1, 32, 26, 26]             288
+ *Buid the model**
+_model summary_   
+ 
+ 
+       | Layer (type)       |Output Shape       |  Param       |
+       | ------------------ |:-----------------:| ------------:|
+       |    Conv2d-1        |  [-1, 32, 26, 26] |          288 |  
             Conv2d-2           [-1, 64, 24, 24]          18,432
             Conv2d-3          [-1, 128, 10, 10]          73,728
             Conv2d-4            [-1, 256, 8, 8]         294,912
