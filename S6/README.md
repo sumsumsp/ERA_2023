@@ -130,6 +130,6 @@ loss=0.12737925350666046 batch_id=937: 100%|████████████
 Test set: Average loss: 0.0204, Accuracy: 9941/10000 (99.41%)
 
 ### Training/Test Accuracy 
-Got test accuracy 99.41% with gradual decrease in Loss 
+Got test accuracy 99.41% (16th Epoch) with gradual decrease in Loss 
 ![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/9a9c5f93-73fd-46d7-93c2-88690da22bd3)
 
