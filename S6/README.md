@@ -134,7 +134,7 @@ Got test accuracy 99.41% (16th Epoch) with gradual decrease in Loss
 ![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/9a9c5f93-73fd-46d7-93c2-88690da22bd3)
 
 ## Inference 
-Got a test accuracy of 99.41% with 12k parameters 
-Model is light 
-Less overfit model Training 99.5%
-Need to increase the parameters and increase 
+ - Got a test accuracy of 99.41% with 12k parameters 
+ - Model is light 
+ - Less overfit model Training 99.5%
+ - Need to increase the parameters and increase 
