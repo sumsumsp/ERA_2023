@@ -6,7 +6,10 @@
 ##### Targets: to reach 99.4% accuracy with 20 epoch 20k 
 - Initially took the model from last class (Session 7) and replicated the result
 
+
   ![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/4974ef1d-e792-473e-8a5f-ce8463443d50)
+
+
 
 ##### Result
 -99.4% Test Accuracy within 20 Epochs <20K_Parameters 
@@ -24,7 +27,7 @@
 
 
 ### Step 1
-##### Targets: to reach 99.4% accuracy with 15 epoch <8k parameters  
+##### Targets: to reach 99.4% accuracy with 15 epoch near 8k parameters  
 -- Model modified: (Conv2d_10Kernels_3*3)*twice, Transition (Conv2d_6Kernels_1*1),Maxpool2D, Conv2d_12Kernels, Conv2d_16Kernels, Conv2d_16Kernels, Conv2d_16Kernels, Transition (Conv2d_10Kernels), Adaptive Global Average Pooling
 - 8.3k Parameters
   
@@ -44,7 +47,7 @@
 -  change the learning rate
 
 ### Step 2
-##### Targets: to reach 99.4% accuracy with 15 epochs <8k parameters add Learning rate sheduler 
+##### Targets: to reach 99.4% accuracy with 15 epochs near 8k parameters add Learning rate sheduler 
 -- Model training modified with learning rate : Step wise increase in the LR  (6th Step with Gamma 0.2) 
 - 8.3k Parameters (with same model_2)
   
@@ -61,7 +64,9 @@
 ### Step 3
 ##### Targets: to reach 99.4% accuracy with 15 epochs <8k parameters add Learning rate sheduler 
 -- Model training modified with learning rate : Step wise increase in the LR  (6th Step with Gamma 0.2) 
-- Modified the model parameters
+- Modified the model parameters- less (7.8k Parameters)
+
+  
 ![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/76e7fb81-2e81-400c-a681-7cd4aee1c6a8)
 
   
