@@ -828,16 +828,16 @@ Test set: Average loss: 0.4561, Accuracy: 8504/10000 (85.04%)
 
 ### Accuracy of different categories 
 
-Accuracy of plane : 87 %
-Accuracy of   car : 93 %
-Accuracy of  bird : 72 %
-Accuracy of   cat : 57 %
-Accuracy of  deer : 86 %
-Accuracy of   dog : 80 %
-Accuracy of  frog : 93 %
-Accuracy of horse : 91 %
-Accuracy of  ship : 91 %
-Accuracy of truck : 85 %
+- Accuracy of plane : 87 %
+- Accuracy of   car : 93 %
+- Accuracy of  bird : 72 %
+- Accuracy of   cat : 57 %
+- Accuracy of  deer : 86 %
+- Accuracy of   dog : 80 %
+- Accuracy of  frog : 93 %
+- Accuracy of horse : 91 %
+- Accuracy of  ship : 91 %
+- Accuracy of truck : 85 %
 
 
 ### Wrongly classiffied feature 
