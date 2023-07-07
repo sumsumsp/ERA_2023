@@ -337,7 +337,8 @@ Test set: Average loss: 0.3017, Accuracy: 9027/10000 (90.27%)
 
 Learning Rate
 
-![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/f6fc30d8-7452-4c23-92b6-0f2540d88a1d)
+![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/607c668d-dfcb-4d24-9881-95ae45b21845)
+
 
 ## Accuracy of classes 
 Files already downloaded and verified
