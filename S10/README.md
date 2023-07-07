@@ -1,5 +1,5 @@
 # Assignment find Learning Rate and buid a residual block 
-
+## s10_LR finder_final.ipynb
 - Write a customLinks to an external site. ResNet architecture for CIFAR10 that has the following architecture:
 - PrepLayer - Conv 3x3 s1, p1) >> BN >> RELU [64k]
 - Layer1 -
@@ -94,15 +94,16 @@ lr_finder.range_test (trainloader, end_lr = 10, num_iter =400, step_mode ="exp")
 lr_finder.plot()
 lr_finder.reset()
 
+![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/4e675aba-6eea-4eda-939d-3db6c4bdcf8b)
 
 
-![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/7068f358-96c8-432d-bc7c-de7eab58c04f)
 
-Suggested LR: 4.59E-02
+
+Suggested LR: 4.03E-02
 
 Sheduler = OneCycleLR(
     optimizer, 
-    max_lr=4.59E-02,
+    max_lr=4.03E-02,
     steps_per_epoch= len(trainloader),
     epochs = epochs,
     pct_start =5/epochs,
@@ -115,226 +116,239 @@ Sheduler = OneCycleLR(
 
 
 ## Training log 
-
  0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 Epoch 0
-loss=1.5238759517669678 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:56<00:00,  1.74it/s]
+loss=1.5146912336349487 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.76it/s]
 
-Train set: Average loss: 0.0038, Accuracy: 18045/50000 (36.09%)
+Train set: Average loss: 0.0041, Accuracy: 16731/50000 (33.46%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 1.3505, Accuracy: 5073/10000 (50.73%)
+Test set: Average loss: 1.7735, Accuracy: 4060/10000 (40.60%)
 
 Epoch 1
-loss=1.3157850503921509 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:54<00:00,  1.79it/s]
+loss=1.185870885848999 batch_id=97: 100%|██████████████████████████████████████████████| 98/98 [00:56<00:00,  1.74it/s]
 
-Train set: Average loss: 0.0027, Accuracy: 25227/50000 (50.45%)
+Train set: Average loss: 0.0027, Accuracy: 24806/50000 (49.61%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 1.1351, Accuracy: 6036/10000 (60.36%)
+Test set: Average loss: 1.3196, Accuracy: 5731/10000 (57.31%)
 
 Epoch 2
-loss=1.0671796798706055 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.77it/s]
+loss=1.2135556936264038 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:53<00:00,  1.83it/s]
 
-Train set: Average loss: 0.0023, Accuracy: 29212/50000 (58.42%)
+Train set: Average loss: 0.0023, Accuracy: 29167/50000 (58.33%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.9896, Accuracy: 6608/10000 (66.08%)
+Test set: Average loss: 1.2121, Accuracy: 5956/10000 (59.56%)
 
 Epoch 3
-loss=0.8389999866485596 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:54<00:00,  1.79it/s]
+loss=0.9431464076042175 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:53<00:00,  1.84it/s]
 
-Train set: Average loss: 0.0020, Accuracy: 32106/50000 (64.21%)
+Train set: Average loss: 0.0020, Accuracy: 31876/50000 (63.75%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 1.0505, Accuracy: 6669/10000 (66.69%)
+Test set: Average loss: 1.1639, Accuracy: 6360/10000 (63.60%)
 
 Epoch 4
-loss=0.8414093255996704 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.76it/s]
+loss=0.9179015159606934 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:53<00:00,  1.82it/s]
 
-Train set: Average loss: 0.0018, Accuracy: 34139/50000 (68.28%)
+Train set: Average loss: 0.0018, Accuracy: 33452/50000 (66.90%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.7238, Accuracy: 7539/10000 (75.39%)
+Test set: Average loss: 0.8096, Accuracy: 7127/10000 (71.27%)
 
 Epoch 5
-loss=0.7480989098548889 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:56<00:00,  1.75it/s]
+loss=1.0155216455459595 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:53<00:00,  1.84it/s]
 
-Train set: Average loss: 0.0016, Accuracy: 35579/50000 (71.16%)
+Train set: Average loss: 0.0017, Accuracy: 34568/50000 (69.14%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.6309, Accuracy: 7841/10000 (78.41%)
+Test set: Average loss: 0.8079, Accuracy: 7204/10000 (72.04%)
 
 Epoch 6
-loss=0.7822126746177673 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.77it/s]
+loss=0.7592952847480774 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.76it/s]
 
-Train set: Average loss: 0.0015, Accuracy: 36801/50000 (73.60%)
+Train set: Average loss: 0.0016, Accuracy: 35637/50000 (71.27%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.7210, Accuracy: 7584/10000 (75.84%)
+Test set: Average loss: 0.8764, Accuracy: 7105/10000 (71.05%)
 
 Epoch 7
-loss=0.7464777827262878 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.77it/s]
+loss=0.730430543422699 batch_id=97: 100%|██████████████████████████████████████████████| 98/98 [00:54<00:00,  1.81it/s]
 
-Train set: Average loss: 0.0014, Accuracy: 37829/50000 (75.66%)
+Train set: Average loss: 0.0016, Accuracy: 36093/50000 (72.19%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.6698, Accuracy: 7873/10000 (78.73%)
+Test set: Average loss: 0.7342, Accuracy: 7587/10000 (75.87%)
 
 Epoch 8
-loss=0.7298762202262878 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.76it/s]
+loss=0.7993651032447815 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:56<00:00,  1.74it/s]
 
-Train set: Average loss: 0.0013, Accuracy: 38312/50000 (76.62%)
+Train set: Average loss: 0.0015, Accuracy: 36647/50000 (73.29%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.5753, Accuracy: 8094/10000 (80.94%)
+Test set: Average loss: 0.6360, Accuracy: 7881/10000 (78.81%)
 
 Epoch 9
-loss=0.6413329839706421 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:57<00:00,  1.71it/s]
+loss=0.7077876925468445 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.76it/s]
 
-Train set: Average loss: 0.0012, Accuracy: 39020/50000 (78.04%)
+Train set: Average loss: 0.0015, Accuracy: 36980/50000 (73.96%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.5423, Accuracy: 8200/10000 (82.00%)
+Test set: Average loss: 0.6745, Accuracy: 7707/10000 (77.07%)
 
 Epoch 10
-loss=0.5772444605827332 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:56<00:00,  1.75it/s]
+loss=0.7080246806144714 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:53<00:00,  1.83it/s]
 
-Train set: Average loss: 0.0012, Accuracy: 39547/50000 (79.09%)
+Train set: Average loss: 0.0014, Accuracy: 37246/50000 (74.49%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.5075, Accuracy: 8339/10000 (83.39%)
+Test set: Average loss: 0.6301, Accuracy: 7877/10000 (78.77%)
 
 Epoch 11
-loss=0.6102855205535889 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.76it/s]
+loss=0.723296046257019 batch_id=97: 100%|██████████████████████████████████████████████| 98/98 [00:54<00:00,  1.78it/s]
 
-Train set: Average loss: 0.0011, Accuracy: 40046/50000 (80.09%)
+Train set: Average loss: 0.0014, Accuracy: 37663/50000 (75.33%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4990, Accuracy: 8288/10000 (82.88%)
+Test set: Average loss: 0.7106, Accuracy: 7623/10000 (76.23%)
 
 Epoch 12
-loss=0.6206290125846863 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:56<00:00,  1.75it/s]
+loss=0.7428582310676575 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:54<00:00,  1.81it/s]
 
-Train set: Average loss: 0.0011, Accuracy: 40615/50000 (81.23%)
+Train set: Average loss: 0.0014, Accuracy: 37921/50000 (75.84%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4810, Accuracy: 8427/10000 (84.27%)
+Test set: Average loss: 0.6912, Accuracy: 7810/10000 (78.10%)
 
 Epoch 13
-loss=0.5219031572341919 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.75it/s]
+loss=0.6044697165489197 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:53<00:00,  1.84it/s]
 
-Train set: Average loss: 0.0010, Accuracy: 41071/50000 (82.14%)
+Train set: Average loss: 0.0013, Accuracy: 38318/50000 (76.64%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4636, Accuracy: 8501/10000 (85.01%)
+Test set: Average loss: 0.6321, Accuracy: 7825/10000 (78.25%)
 
 Epoch 14
-loss=0.5092036128044128 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.76it/s]
+loss=0.6938304901123047 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:53<00:00,  1.84it/s]
 
-Train set: Average loss: 0.0010, Accuracy: 41285/50000 (82.57%)
+Train set: Average loss: 0.0013, Accuracy: 38597/50000 (77.19%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4947, Accuracy: 8419/10000 (84.19%)
+Test set: Average loss: 0.6102, Accuracy: 7991/10000 (79.91%)
 
 Epoch 15
-loss=0.4842441976070404 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:56<00:00,  1.75it/s]
+loss=0.6378158330917358 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:54<00:00,  1.81it/s]
 
-Train set: Average loss: 0.0009, Accuracy: 41620/50000 (83.24%)
+Train set: Average loss: 0.0012, Accuracy: 39120/50000 (78.24%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.5986, Accuracy: 8211/10000 (82.11%)
+Test set: Average loss: 0.6605, Accuracy: 7849/10000 (78.49%)
 
 Epoch 16
-loss=0.4614824652671814 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:54<00:00,  1.79it/s]
+loss=0.6483494639396667 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:53<00:00,  1.83it/s]
 
-Train set: Average loss: 0.0009, Accuracy: 41841/50000 (83.68%)
+Train set: Average loss: 0.0012, Accuracy: 39356/50000 (78.71%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4418, Accuracy: 8599/10000 (85.99%)
+Test set: Average loss: 0.5103, Accuracy: 8279/10000 (82.79%)
 
 Epoch 17
-loss=0.43451976776123047 batch_id=97: 100%|████████████████████████████████████████████| 98/98 [00:58<00:00,  1.66it/s]
+loss=0.5752604603767395 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:53<00:00,  1.83it/s]
 
-Train set: Average loss: 0.0009, Accuracy: 42279/50000 (84.56%)
+Train set: Average loss: 0.0011, Accuracy: 39793/50000 (79.59%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4352, Accuracy: 8697/10000 (86.97%)
+Test set: Average loss: 0.5619, Accuracy: 8141/10000 (81.41%)
 
 Epoch 18
-loss=0.4383581280708313 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:54<00:00,  1.79it/s]
+loss=0.6843724250793457 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:54<00:00,  1.79it/s]
 
-Train set: Average loss: 0.0008, Accuracy: 42583/50000 (85.17%)
+Train set: Average loss: 0.0011, Accuracy: 40302/50000 (80.60%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4048, Accuracy: 8735/10000 (87.35%)
+Test set: Average loss: 0.4632, Accuracy: 8461/10000 (84.61%)
 
 Epoch 19
-loss=0.44946444034576416 batch_id=97: 100%|████████████████████████████████████████████| 98/98 [00:54<00:00,  1.80it/s]
+loss=0.48743900656700134 batch_id=97: 100%|████████████████████████████████████████████| 98/98 [00:56<00:00,  1.74it/s]
 
-Train set: Average loss: 0.0008, Accuracy: 42480/50000 (84.96%)
+Train set: Average loss: 0.0010, Accuracy: 40857/50000 (81.71%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4116, Accuracy: 8691/10000 (86.91%)
+Test set: Average loss: 0.4784, Accuracy: 8424/10000 (84.24%)
 
 Epoch 20
-loss=0.46391427516937256 batch_id=97: 100%|████████████████████████████████████████████| 98/98 [00:53<00:00,  1.82it/s]
+loss=0.41596609354019165 batch_id=97: 100%|████████████████████████████████████████████| 98/98 [00:55<00:00,  1.76it/s]
 
-Train set: Average loss: 0.0008, Accuracy: 42586/50000 (85.17%)
+Train set: Average loss: 0.0010, Accuracy: 41425/50000 (82.85%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4368, Accuracy: 8615/10000 (86.15%)
+Test set: Average loss: 0.4664, Accuracy: 8461/10000 (84.61%)
 
 Epoch 21
-loss=0.5125478506088257 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:56<00:00,  1.74it/s]
+loss=0.3947847783565521 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:57<00:00,  1.71it/s]
 
-Train set: Average loss: 0.0008, Accuracy: 43134/50000 (86.27%)
+Train set: Average loss: 0.0009, Accuracy: 42101/50000 (84.20%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4840, Accuracy: 8615/10000 (86.15%)
+Test set: Average loss: 0.4065, Accuracy: 8628/10000 (86.28%)
 
 Epoch 22
-loss=0.37731805443763733 batch_id=97: 100%|████████████████████████████████████████████| 98/98 [00:58<00:00,  1.67it/s]
+loss=0.3092397153377533 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:55<00:00,  1.77it/s]
 
-Train set: Average loss: 0.0008, Accuracy: 43281/50000 (86.56%)
+Train set: Average loss: 0.0008, Accuracy: 43054/50000 (86.11%)
 
   0%|                                                                                           | 0/98 [00:00<?, ?it/s]
 
-Test set: Average loss: 0.4060, Accuracy: 8745/10000 (87.45%)
+Test set: Average loss: 0.3377, Accuracy: 8895/10000 (88.95%)
 
 Epoch 23
-loss=0.37180882692337036 batch_id=97: 100%|████████████████████████████████████████████| 98/98 [00:54<00:00,  1.79it/s]
+loss=0.3003857731819153 batch_id=97: 100%|█████████████████████████████████████████████| 98/98 [00:54<00:00,  1.81it/s]
 
-Train set: Average loss: 0.0007, Accuracy: 43530/50000 (87.06%)
-
-
-Test set: Average loss: 0.3930, Accuracy: 8822/10000 (88.22%)
+Train set: Average loss: 0.0007, Accuracy: 43884/50000 (87.77%)
 
 
-![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/52266165-c8de-4717-b0c2-e5904874f35b)
+Test set: Average loss: 0.3017, Accuracy: 9027/10000 (90.27%)
+
+![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/4a0d77bc-5e35-4bdf-a72d-7233d8375c7e)
 
 
-# Target Reached 88% in 24epochs 
+Learning Rate
 
+![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/f6fc30d8-7452-4c23-92b6-0f2540d88a1d)
+
+## Accuracy of classes 
+Files already downloaded and verified
+Files already downloaded and verified
+Accuracy of plane : 100 %
+Accuracy of   car : 89 %
+Accuracy of  bird : 75 %
+Accuracy of   cat : 69 %
+Accuracy of  deer : 95 %
+Accuracy of   dog : 75 %
+Accuracy of  frog : 92 %
+Accuracy of horse : 95 %
+Accuracy of  ship : 100 %
+Accuracy of truck : 83 %
