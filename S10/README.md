@@ -341,15 +341,14 @@ Learning Rate
 
 
 ## Accuracy of classes 
-Files already downloaded and verified
-Files already downloaded and verified
-Accuracy of plane : 100 %
-Accuracy of   car : 89 %
-Accuracy of  bird : 75 %
-Accuracy of   cat : 69 %
-Accuracy of  deer : 95 %
-Accuracy of   dog : 75 %
-Accuracy of  frog : 92 %
-Accuracy of horse : 95 %
-Accuracy of  ship : 100 %
-Accuracy of truck : 83 %
+### total test accuracy 90.29%
+- Accuracy of plane : 100 %
+- Accuracy of   car : 89 %
+- Accuracy of  bird : 75 %
+- Accuracy of   cat : 69 %
+- Accuracy of  deer : 95 %
+- Accuracy of   dog : 75 %
+- Accuracy of  frog : 92 %
+- Accuracy of horse : 95 %
+- Accuracy of  ship : 100 %
+- Accuracy of truck : 83 %
