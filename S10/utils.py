@@ -100,19 +100,3 @@ classes = ('plane', 'car', 'bird', 'cat',
 
 inv_norm = transforms.Normalize((-0.4914/0.2023, -0.4822/0.1994, -0.4465/0.2010), (1/0.2023, 1/0.1994, 1/0.2010))
 
-def plotGradCam(wrong_predictions,cams):
-    for i, (sample, wrong_pred, actual_value) in enumerate(wrong_predictions[:20]):
-        torch_img = inv_norm(sample)
-        normed_torch_img = sample[None]
-        images = []
-        for gradcam, gradcam_pp in cams:
-            mask, _ = gradcam(normed_torch_img)
-            heatmap, result = visualize_cam(mask, torch_img)
-
-            mask_pp, _ = gradcam_pp(normed_torch_img)
-            heatmap_pp, result_pp = visualize_cam(mask_pp, torch_img)
-            
-            images.extend([torch_img.cpu(), heatmap, heatmap_pp, result, result_pp])
-            
-        grid_image = make_grid(images, nrow=5)
-        imshow(grid_image)
