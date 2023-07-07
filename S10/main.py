@@ -5,8 +5,21 @@ from torch.optim.lr_scheduler import StepLR, OneCycleLR, ReduceLROnPlateau
 from utils import *
 import torch.nn.functional as F
 #from models.resnet import Resnet18
+from torch.optim.lr_scheduler import OneCycleLR
 
-def train(model, device, train_loader, optimizer, epoch, criterion):
+def scheduler():
+    OneCycleLR(
+    optimizer, 
+    max_lr=  4.15E-02,
+    steps_per_epoch= len(trainloader),
+    epochs = epochs,
+    pct_start =5/epochs,
+    div_factor =100, 
+    three_phase =False, 
+    final_div_factor =100,
+    anneal_strategy= 'linear')
+
+def train(model, device, train_loader, optimizer, epoch, criterion,scheduler):
     model.train()
     pbar = tqdm(train_loader)
     train_loss = 0
@@ -21,6 +34,9 @@ def train(model, device, train_loader, optimizer, epoch, criterion):
         train_loss += loss.item()       
         loss.backward()
         optimizer.step()
+        
+        if scheduler != None:
+            scheduler.step ()
         #scheduler.step()
         
         pbar.set_description(desc= f'loss={loss.item()} batch_id={batch_idx}')        
