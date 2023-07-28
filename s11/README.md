@@ -222,7 +222,8 @@ Accuracy of truck : 91 %
 ![image](https://github.com/sumsumsp/ERA_2023/assets/77090119/879b5a11-24cc-4bb2-bf0a-013850ef7f78)
 
 
-
+### Conclusion 
+- Got 88% accuracy in 20 epochs 
 
 
 
